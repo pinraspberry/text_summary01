@@ -25,6 +25,28 @@
                 </div>
             </div>
 
+            <!-- Word Cloud Section -->
+            <h2 class="section-title">Word Cloud Visualization</h2>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="wordcloud-container">
+                        <img src="{{ wordcloud_path }}" alt="Word Cloud" class="wordcloud-img">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Keywords Section -->
+            <h2 class="section-title">Top Keywords</h2>
+            <div class="row mb-4">
+                <div class="col-md-12">
+                    <div class="p-3 bg-light rounded">
+                        {% for keyword, count in keywords %}
+                            <span class="badge bg-primary keyword-badge">{{ keyword }} ({{ count }})</span>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
             <!-- Original Text -->
             <div class="col-md-6 mb-3">
               <label for="rawtext" class="form-label"><strong>Original Text</strong></label>
